@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 import openpyxl
-import os
 from cleanfunc.py import cleandf
+from checkdir.py import checkdir
 
-os.makedirs('vip', exist_ok=True)
-os.makedirs('normal', exist_ok=True)
+checkdir()
+
 for i in csv_files:
     vip, normal = cleandf(pd.read_csv(i),dateofcreation)
  #   vip = vip.drop(['index'], axis = 1).reset_index().drop(['index'], axis = 1)
