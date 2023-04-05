@@ -1,8 +1,12 @@
 import numpy as np
 import pandas as pd
 import openpyxl
-from cleanfunc.py import cleandf
-from checkdir.py import checkdir
+from cleanfunc import cleandf
+from checkdir import checkdir
+
+all_files = os.listdir(os.getcwd())    
+csv_files = list(filter(lambda f: f.endswith('.csv'), all_files))
+dateofcreation = '07/11/2022'
 
 checkdir()
 
