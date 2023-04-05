@@ -16,7 +16,7 @@ def cleandf(df,tdv):
                 
     df_res = pd.concat([df,df_add],axis = 0)
     df_res = df_res[df_res['Email'].notna()]
-    df_res = df_res.reset_index()
+    #df_res = df_res.reset_index()
 
     if 'Amount (May be approx.) (PC)' in df_res.columns:
         temp_df = df_res
