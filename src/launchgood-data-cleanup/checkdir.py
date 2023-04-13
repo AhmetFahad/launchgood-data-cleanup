@@ -1,4 +1,4 @@
-def checkdir():
+def checkdir(dir):
     import os
-    os.makedirs('vip', exist_ok=True)
-    os.makedirs('normal', exist_ok=True)
+    os.makedirs(dir/'vip', exist_ok=True)
+    os.makedirs(dir/'normal', exist_ok=True)
